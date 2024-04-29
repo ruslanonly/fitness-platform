@@ -1,0 +1,20 @@
+const env = require('dotenv');
+env.config();
+
+const MONGO_INITDB_DATABASE = process.env.MONGO_INITDB_DATABASE
+const MONGO_INITDB_ROOT_USERNAME = process.env.MONGO_INITDB_ROOT_USERNAME
+const MONGO_INITDB_ROOT_PASSWORD = process.env.MONGO_INITDB_ROOT_PASSWORD
+
+const MONGO_URL = `mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@127.0.0.1:27017/`;
+
+module.exports = {
+    APPLICATION: {
+        PORT: process.env.APPLICATION_PORT
+    },
+    DATABASE: {
+        MONGO_URL,
+        MONGO_INITDB_DATABASE,
+        MONGO_INITDB_ROOT_USERNAME,
+        MONGO_INITDB_ROOT_PASSWORD
+    }
+}
