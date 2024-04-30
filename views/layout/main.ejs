@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/layout/layout.css">
+        <title><%- meta.title %></title>
+        <script src="/js/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__wrapper container">
+                <div class="header__left">
+                    <a class="header__logo-title" href="/home">
+                        <div class="header__logo"></div>
+                        <h1 class="header__title">Fitness Platform</h1>
+                    </a>
+                    <div class="header__tabs">
+                        <a class="header__tab $activeClass" href="/">$name</a>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        
+
+        <main class="main">
+            <div class="main__wrapper container">
+                <main><%- body %></main>
+            </div>
+        </main>
+    </body>
+</html>

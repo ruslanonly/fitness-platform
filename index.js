@@ -1,12 +1,13 @@
 const mongoose = require('mongoose')
 const app = require('./app/app')
 
-const database = require('./config/db')
+const database = require('./config/db');
+const config = require('./config');
 
 async function startup() {
     try{
 		await database.connect()
-        app.listen(3000);
+        app.listen(config.APPLICATION.PORT);
         console.log("Сервер ожидает подключения...");
     }
     catch(err) {

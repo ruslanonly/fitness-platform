@@ -9,18 +9,26 @@ const validateEmail = email => {
 };
 
 const FeedbackRequest = new Schema({
-    name: String,
+    name: {
+        type: String,
+        required: 'Необходимо ввести имя отправителя'
+    },
     email: {
         type: String,
         trim: true,
         lowercase: true,
-        unique: true,
         required: 'Необходимо ввести почту',
         validate: [validateEmail, 'Введите название почту в правильном формате'],
         match: [EMAIL_REGEX, 'Please fill a valid email address']
     },
-    theme: String,
-    message: String
+    topic: {
+        type: String,
+        required: 'Необходимо ввести тему сообщения'
+    },
+    message: {
+        type: String,
+        required: 'Необходимо ввести сообщение'
+    }
 })
 
 module.exports = mongoose.model('FeedbackFequest', FeedbackRequest)
