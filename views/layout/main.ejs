@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/layout/layout.css">
         <title><%- meta.title %></title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="/js/jquery-3.7.1.min.js"></script>
+        <script src="/js/utils.js"></script>
     </head>
     <body>
         <header class="header">
@@ -16,7 +19,10 @@
                         <h1 class="header__title">Fitness Platform</h1>
                     </a>
                     <div class="header__tabs">
-                        <a class="header__tab $activeClass" href="/">$name</a>
+                        <% if (layout_elements.header_tabs) { %>
+                            <a class="header__tab" href="/courses">Курсы</a>
+                            <a class="header__tab" href="/feedback">Обратная связь</a>
+                        <% } %>
                     </div>
                 </div>
                 

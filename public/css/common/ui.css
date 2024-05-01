@@ -22,6 +22,7 @@
 }
 
 .button {
+    text-align: center;
     width: 100%;
     font-size: 14px;
     cursor: pointer;
@@ -45,6 +46,15 @@
     background-color: var(--violet-400);
 }
 
+.button:disabled {
+    background-color: var(--violet-200);
+    cursor: default;
+}
+
+.button:disabled:hover {
+    background-color: var(--violet-200);
+}
+
 .button:hover {
     background-color: var(--violet-500);
 }
@@ -60,6 +70,15 @@
 
 .button.danger:hover {
     background-color: var(--red-500);
+}
+
+.button.button-link {
+    background-color: transparent;
+    color: var(--violet-500);
+}
+
+.button.button-link:hover {
+    color: var(--violet-600);
 }
 
 .input {

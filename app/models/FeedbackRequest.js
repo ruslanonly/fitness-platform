@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const { MODEL } = require('./consts');
 
 const Schema = mongoose.Schema
 
@@ -18,7 +19,7 @@ const FeedbackRequest = new Schema({
         trim: true,
         lowercase: true,
         required: 'Необходимо ввести почту',
-        validate: [validateEmail, 'Введите название почту в правильном формате'],
+        validate: [validateEmail, 'Введите почту в правильном формате'],
         match: [EMAIL_REGEX, 'Please fill a valid email address']
     },
     topic: {
@@ -31,4 +32,4 @@ const FeedbackRequest = new Schema({
     }
 })
 
-module.exports = mongoose.model('FeedbackFequest', FeedbackRequest)
+module.exports = mongoose.model(MODEL.FEEDBACK_REQUEST, FeedbackRequest)

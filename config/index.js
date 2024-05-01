@@ -9,7 +9,8 @@ const MONGO_URL = `mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_P
 
 module.exports = {
     APPLICATION: {
-        PORT: process.env.APPLICATION_PORT
+        PORT: process.env.APPLICATION_PORT,
+        JWT_SECRET: process.env.JWT_SECRET
     },
     DATABASE: {
         MONGO_URL,

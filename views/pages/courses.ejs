@@ -5,29 +5,23 @@
         <div class="sidebar tile tile--sm">
             <a class="sidebar__item" href="/">На главную страницу</a>
         </div>
+        <div class="sidebar tile tile--sm">
+            <a type="submit" class="button" style="text-align: center" href="/add_report.php">
+                Создать отчет
+            </a>
+        </div>
+        <div class="sidebar tile tile--sm">
+            <form id="filter-form" class="filter-form">
+                <input type="hidden" name="product_id" value="<?php echo $PRODUCT_ID;?>">
+                <select class="select" name="status" placeholder="Любой статус"></select>
+                <select class="select" name="problem" placeholder="Любой тип проблемы"></select>
+                <select class="select" name="priority" placeholder="Любой приоритет"></select>
+            </form>
+        </div>
     </div>
     <div class="layout__col layout__col--stretched">
         <div class="tile">
-            <h2 class="page__title">Обратная связь</h2>
-            <form id="create-feedback__form" class="form">
-                <div class="form-item">
-                    <label for='name'>Имя *</label>
-                    <input class="input" type='text' name='name' required>
-                </div>
-                <div class="form-item">
-                    <label for='email'>Почта *</label>
-                    <input class="input" type='text' name='email' required>
-                </div>
-                <div class="form-item">
-                    <label for='topic'>Тема сообщения *</label>
-                    <input class="input" type='text' name='topic' required>
-                </div>
-                <div class="form-item">
-                    <label for='message'>Сообщение *</label>
-                    <textarea class="input" type='text' name='message' required></textarea>
-                </div>
-                <button id="submit-button" class="button">Добавить</button>
-            </form>
+            <h2 class="page__title">Курсы</h2>
         </div>
     </div>
 </div>
